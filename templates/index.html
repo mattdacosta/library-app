@@ -1,6 +1,14 @@
 <html>
   <head></head>
   <body>
+    {{if .DBStatus}}
+      <p>Alive!</p>
+    {{else}}
+      <p>Dead!</p>
+    {{end}}
+
+    <p>Hola {{.Name}}</p>
+
     <form id="search-form" onsubmit="return false">
       <input name="search" />
       <input type="submit" value="search" onclick="submitSearch()" />
